@@ -4,7 +4,7 @@ tier: capability          # primitive | capability | blueprint
 maturity: experimental    # experimental | stable | deprecated
 description: Cloud Armor security policy with OWASP preconfigured rules, IP allow and deny lists, rate limiting and adaptive protection
 owners: [platform]
-upstream: null            # e.g. "terraform-aws-modules/s3-bucket/aws 5.17.0"
-pairs_with: null          # e.g. "terraform-google-gcs-bucket"
+upstream: "GoogleCloudPlatform/cloud-armor/google 9.0.0"
+pairs_with: null
 registry_name: terraform-google-cloud-armor
 deprecated: null          # { removal: YYYY-MM-DD, replacement: <repo> }
