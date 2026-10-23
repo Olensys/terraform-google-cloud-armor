@@ -12,14 +12,20 @@ Cloud Armor security policy with OWASP preconfigured rules, IP allow and deny li
 - `adaptive_protection = true` (default) enables layer 7 DDoS defence with standard rule visibility.
 - Labels are merged from `context.extra_tags` and `labels` and applied to the policy.
 - Upstream creates the policy with the `google-beta` provider, so both `google` and `google-beta` (>= 7.17, < 8.0) are required. 7.17 is the minimum of the pinned upstream, above the library floor.
+- `context.extra_tags` keys and values are normalised to valid GCP label syntax (lowercase, `[^a-z0-9_-]` → `-`, 63 chars); `labels` are applied verbatim and win.
 
 ## Usage
 
 ```hcl
-module "this" {
-  source = "git::https://github.com/Olensys/terraform-google-cloud-armor.git?ref=v1.0.0"
+module "naming" {
+  source  = "git::https://github.com/Olensys/terraform-null-naming.git?ref=v1.0.1"
+  context = var.context
+}
 
-  name       = "example"
+module "this" {
+  source = "git::https://github.com/Olensys/terraform-google-cloud-armor.git?ref=v1.1.0"
+
+  name       = module.naming.name
   project_id = "my-project"
   context = {
     organization = "olensys"
@@ -28,6 +34,8 @@ module "this" {
     owner        = "platform"
     cost_center  = "eng"
   }
+
+  labels = module.naming.labels
 }
 ```
 
