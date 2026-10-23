@@ -1,6 +1,6 @@
-# __NAME__
+# terraform-google-cloud-armor
 
-__DESCRIPTION__
+Cloud Armor security policy with OWASP preconfigured rules, IP allow and deny lists, rate limiting and adaptive protection
 
 ## Opinions
 
@@ -10,7 +10,7 @@ __DESCRIPTION__
 
 ```hcl
 module "this" {
-  source = "git::https://github.com/Olensys/__NAME__.git?ref=v1.0.0"
+  source = "git::https://github.com/Olensys/terraform-google-cloud-armor.git?ref=v1.0.0"
 
   name = "example"
   context = {
