@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Olensys/terraform-google-cloud-armor/compare/v1.1.0...v1.1.1) (2026-10-24)
+
+
+### Bug Fixes
+
+* run integration on change and weekly instead of nightly ([22d0031](https://github.com/Olensys/terraform-google-cloud-armor/commit/22d00317e88a4b0655fe6b469d8c85d48189c637))
+
 ## 1.1.0
 
 ### Fixes
