@@ -1,7 +1,7 @@
 name: terraform-google-cloud-armor
 cloud: google          # aws | google | common
 tier: capability          # primitive | capability | blueprint
-maturity: experimental    # experimental | stable | deprecated
+maturity: stable    # experimental | stable | deprecated
 description: Cloud Armor security policy with OWASP preconfigured rules, IP allow and deny lists, rate limiting and adaptive protection
 owners: [platform]
 upstream: "GoogleCloudPlatform/cloud-armor/google 9.0.0"
