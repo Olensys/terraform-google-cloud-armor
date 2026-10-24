@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/Olensys/terraform-google-cloud-armor/compare/v1.1.1...v1.1.2) (2026-10-24)
+
+
+### Bug Fixes
+
+* **examples:** unique application slug so concurrent integration runs do not collide ([#2](https://github.com/Olensys/terraform-google-cloud-armor/issues/2)) ([7ef71d7](https://github.com/Olensys/terraform-google-cloud-armor/commit/7ef71d7aea65bf4b81b5b521c5ac896f88b3e035))
+
 ## [1.1.1](https://github.com/Olensys/terraform-google-cloud-armor/compare/v1.1.0...v1.1.1) (2026-10-24)
 
 
