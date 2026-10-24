@@ -17,6 +17,16 @@ Cloud Armor security policy with OWASP preconfigured rules, IP allow and deny li
 ## Usage
 
 ```hcl
+variable "context" {
+  default = {
+    organization = "olensys"
+    environment  = "dev"
+    application  = "example"
+    owner        = "platform"
+    cost_center  = "eng"
+  }
+}
+
 module "naming" {
   source  = "git::https://github.com/Olensys/terraform-null-naming.git?ref=v1.0.1"
   context = var.context
@@ -27,13 +37,7 @@ module "this" {
 
   name       = module.naming.name
   project_id = "my-project"
-  context = {
-    organization = "olensys"
-    environment  = "dev"
-    application  = "example"
-    owner        = "platform"
-    cost_center  = "eng"
-  }
+  context = var.context
 
   labels = module.naming.labels
 }
